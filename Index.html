@@ -47,15 +47,26 @@
 </head>
 <body>
 <div class="box">
-    <input type="text" class="se">
+    <input type="text" class="se" data="bd">
 </div>
 <div class="box">
-    <input type="text" class="se">
+    <input type="text" class="se" data="gg">
 </div>
 <script>
     $( ".se" ).keyup(function(e) {
         if(e.keyCode ==13){
-            window.location.href="http://baidu.com"
+            $(".se").each(function(){
+                var text = $(this).val();
+                var engine = $(this).attr("data");
+                if (text.length > 0) {
+                    if (engine === 'bd') {
+                        window.location.href="https://www.baidu.com/s?wd="+text;
+                    }
+                    if (engine === 'gg') {
+                        window.location.href="https://www.google.com/search?q="+text+"&pws=0&gl=us&gws_rd=cr";
+                    }
+                }
+            });
         }
     });
 </script>
