@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #3eff8e;
+        }
+
+        .se {
+            height: 50px;
+            width: 500px;
+            position: relative;
+            left: 35%;
+            border-width: 0 0 0 0;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        .box {
+            position: relative;
+            top: 20%;
+            left: 0%;
+            right: 0%;
+            margin-bottom: 50px;
+        }
+        .head {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            left: 30%;
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text" class="se">
+</div>
+<div class="box">
+    <input type="text" class="se">
+</div>
+<script>
+    $( ".se" ).keyup(function(e) {
+        if(e.keyCode ==13){
+            window.location.href="http://baidu.com"
+        }
+    });
+</script>
+</body>
+</html>
