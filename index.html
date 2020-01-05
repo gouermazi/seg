@@ -19,10 +19,7 @@
             border-radius: 20px;
             height: 350px;
             margin: auto;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            position: relative;
         }
 
         .go {
@@ -40,12 +37,17 @@
         .len {
             /*width: 500px;*/
         }
+        .hold {
+
+        }
     </style>
 </head>
 <body>
 <!-- Textfield with Floating Label -->
+<div class="hold">
+
+</div>
 <div class="box len" style="width:45%">
-    <div>
         <form autocomplete="off">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
                 <input class="mdl-textfield__input gg len" type="text" id="sample1" data="gg" style="width:100%">
@@ -60,10 +62,9 @@
             </div>
         </form>
         <div>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent go">
-                Go
-            </button>
-        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent go">
+            Go
+        </button>
     </div>
 
     <a class="jump"></a>
