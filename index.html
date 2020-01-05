@@ -17,10 +17,9 @@
             height: 350px;
             margin: auto;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
         .go {
             /*text-align: center; !*让div内部文字居中*!*/
@@ -112,13 +111,6 @@
 
     $(document).ready(function () {
         $(".gg").focus();
-    });
-
-    var winHeight = $(window).height();
-    $(window).resize(function() {
-        var thisHeight = $(this).height();
-        var keyboardHeight = thisHeight - winHeight;
-        $(".gg").css({ 'bottom': keyboardHeight + 'px' });
     });
 </script>
 </body>
