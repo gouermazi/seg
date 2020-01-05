@@ -57,7 +57,7 @@
             Go
         </button>
     </div>
-
+    <a  class="jump"></a>
 </div>
 <script>
     $(".mdl-textfield__input").keyup(function (e) {
@@ -69,10 +69,12 @@
                     $(this).val("");
                 });
                 if (engine === 'bd') {
-                    window.location.href = "https://www.baidu.com/s?wd=" + text;
+                    // window.location.href = "https://www.baidu.com/s?wd=" + text;
+                    jump("https://www.baidu.com/s?wd=" + text)
                 }
                 if (engine === 'gg') {
-                    window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
+                    // window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
+                    jump("https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr")
                 }
             }
         }
@@ -98,10 +100,12 @@
                     $(this).val("");
                 });
                 if (engine === 'bd') {
-                    window.location.href = "https://www.baidu.com/s?wd=" + text;
+                    // window.location.href = "https://www.baidu.com/s?wd=" + text;
+                    jump("https://www.baidu.com/s?wd=" + text)
                 }
                 if (engine === 'gg') {
-                    window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
+                    // window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
+                    jump("https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr")
                 }
             }
         });
@@ -111,6 +115,11 @@
     $(document).ready(function () {
         $(".gg").focus();
     });
+
+    function jump(url) {
+        $(".jump").attr("href", url);
+        $(".jump")[0].click();
+    }
 </script>
 </body>
 </html>
