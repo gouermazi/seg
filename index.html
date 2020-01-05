@@ -113,6 +113,13 @@
     $(document).ready(function () {
         $(".gg").focus();
     });
+
+    var winHeight = $(window).height();
+    $(window).resize(function() {
+        var thisHeight = $(this).height();
+        var keyboardHeight = thisHeight - winHeight;
+        $(".mdl-textfield__input").css({ 'bottom': keyboardHeight + 'px' });
+    });
 </script>
 </body>
 </html>
