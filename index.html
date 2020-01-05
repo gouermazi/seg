@@ -75,6 +75,16 @@
             }
         }
     });
+    $(".mdl-textfield__input").on("input", function () {
+        var engine = $(this).attr("data");
+        $(".mdl-textfield__input").each(function () {
+            var engine1 = $(this).attr("data");
+            if (engine1 !== engine) {
+                $(this).val("")
+            }
+        });
+
+    });
 
     $(".go").on("click", function () {
         $(".mdl-textfield__input").each(function () {
