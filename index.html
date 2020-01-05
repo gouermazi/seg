@@ -17,7 +17,6 @@
         .box {
             background-color: #fff;
             border-radius: 20px;
-            width: 300px;
             height: 350px;
             margin: auto;
             position: fixed;
@@ -46,24 +45,27 @@
 <body>
 <!-- Textfield with Floating Label -->
 <div class="box len" style="width:45%">
-    <form autocomplete="off">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-            <input class="mdl-textfield__input gg len" type="text" id="sample1" data="gg" style="width:100%">
-            <label class="mdl-textfield__label" for="sample1">Google</label>
-        </div>
-    </form>
-    <br>
-    <form autocomplete="off">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:100%">
-            <input class="mdl-textfield__input len" type="text" id="sample4" data="bd" style="width:100%">
-            <label class="mdl-textfield__label" for="sample4">Baidu</label>
-        </div>
-    </form>
     <div>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent go">
-            Go
-        </button>
+        <form autocomplete="off">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
+                <input class="mdl-textfield__input gg len" type="text" id="sample1" data="gg" style="width:100%">
+                <label class="mdl-textfield__label" for="sample1">Google</label>
+            </div>
+        </form>
+        <br>
+        <form autocomplete="off">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:100%">
+                <input class="mdl-textfield__input len" type="text" id="sample4" data="bd" style="width:100%">
+                <label class="mdl-textfield__label" for="sample4">Baidu</label>
+            </div>
+        </form>
+        <div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent go">
+                Go
+            </button>
+        </div>
     </div>
+
     <a class="jump"></a>
 </div>
 <script>
