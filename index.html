@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oops</title>
     <link rel="stylesheet" href="./mdl/material.min.css">
     <script src="./mdl/material.min.js"></script>
@@ -32,21 +33,24 @@
             right: 0;
             bottom: 0;
         }
+        .len {
+            /*width: 500px;*/
+        }
     </style>
 </head>
 <body>
 <!-- Textfield with Floating Label -->
-<div class="box">
+<div class="box len">
     <form autocomplete="off">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input gg" type="text" id="sample1" data="gg">
+            <input class="mdl-textfield__input gg len" type="text" id="sample1" data="gg">
             <label class="mdl-textfield__label" for="sample1">Google</label>
         </div>
     </form>
     <br>
     <form autocomplete="off">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample4" data="bd">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+            <input class="mdl-textfield__input len" type="text" id="sample4" data="bd">
             <label class="mdl-textfield__label" for="sample4">Baidu</label>
         </div>
     </form>
@@ -75,6 +79,7 @@
             }
         }
     });
+
     $(".mdl-textfield__input").on("input", function () {
         var engine = $(this).attr("data");
         $(".mdl-textfield__input").each(function () {
