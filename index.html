@@ -31,7 +31,9 @@
             <input class="mdl-textfield__input gg" type="text" id="sample1" data="gg">
             <label class="mdl-textfield__label" for="sample1">Google</label>
         </div>
-        <br>
+    </form>
+    <br>
+    <form autocomplete="off">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" id="sample4" data="bd">
             <label class="mdl-textfield__label" for="sample4">Baidu</label>
@@ -40,25 +42,25 @@
     </form>
 </div>
 <script>
-    $( ".mdl-textfield__input" ).keyup(function(e) {
-        if(e.keyCode ==13){
+    $(".mdl-textfield__input").keyup(function (e) {
+        if (e.keyCode == 13) {
             var text = $(this).val();
             var engine = $(this).attr("data");
             if (text.length > 0) {
-                $(".mdl-textfield__input").each(function(){
+                $(".mdl-textfield__input").each(function () {
                     $(this).val("");
                 });
                 if (engine === 'bd') {
-                    window.location.href="https://www.baidu.com/s?wd="+text;
+                    window.location.href = "https://www.baidu.com/s?wd=" + text;
                 }
                 if (engine === 'gg') {
-                    window.location.href="https://www.google.com/search?q="+text+"&pws=0&gl=us&gws_rd=cr";
+                    window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
                 }
             }
         }
     });
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         $(".gg").focus();
     });
 </script>
