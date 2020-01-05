@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
+        @media only screen and (max-width: 1081px) {
+            .len {
+                width: 75%;
+            }
+        }
+        @media only screen and (min-width: 1082px) {
+            .len {
+                width: 45%;
+            }
+        }
         html,body {
             position: relative;
             height: 100%;
@@ -33,10 +43,6 @@
             right: 0;
             bottom: 0;
         }
-
-        .len {
-            /*width: 500px;*/
-        }
         .hold {
             height: 10%;
         }
@@ -47,7 +53,7 @@
 <div class="hold">
 
 </div>
-<div class="box len" style="width:45%">
+<div class="box len">
         <form autocomplete="off">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
                 <input class="mdl-textfield__input gg len" type="text" id="sample1" data="gg" style="width:100%">
