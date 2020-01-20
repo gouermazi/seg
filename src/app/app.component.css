@@ -7,19 +7,40 @@
   flex-direction: column;
 }
 
-.example-full-width {
-  margin-top: 10%;
-  margin-bottom: -30px;
-  width: 80%;
-}
-.btn {
-  margin-top: 10%;
-  margin-bottom: -30px;
-  width: 10%;
+@media only screen and (max-width: 1081px) {
+  .len {
+    width: 75%;
+  }
+  .first {
+    margin-top: 15%;
+  }
+  .btn {
+    margin-top: 10%;
+    margin-bottom: -30px;
+    width: 32%;
+  }
+  .example-full-width {
+    margin-top: 10%;
+    margin-bottom: -30px;
+  }
 }
 
-.first {
-  margin-top: 15%;
+@media only screen and (min-width: 1082px) {
+  .len {
+    width: 45%;
+  }
+  .first {
+    margin-top: 5%;
+  }
+  .btn {
+    margin-top: 5%;
+    margin-bottom: -30px;
+    width: 12%;
+  }
+  .example-full-width {
+    margin-top: 7%;
+    margin-bottom: -30px;
+  }
 }
 
 

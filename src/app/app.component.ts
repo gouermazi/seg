@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import {Component} from '@angular/core';
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +15,7 @@ export class AppComponent {
     baidu: new FormControl(''),
     google: new FormControl('')
   });
+
   onSubmit() {
     this.baidu = this.searchForm.value.baidu;
     this.google = this.searchForm.value.google;
@@ -27,13 +28,16 @@ export class AppComponent {
   }
 
   jump(url: string) {
-    window.location.href = url;
+    console.log(url);
+    if (url.length > 0) {
+      window.location.href = url;
+    }
   }
 
   getTarget() {
-    let google = this.google.length > 0 ? 'https://www.google.com/search?q=' + this.google + '&pws=0&gl=us&gws_rd=cr'  : '';
-    let baidu  = this.baidu.length > 0 ? 'https://www.baidu.com/s?wd=' + this.baidu : '';
-    if (google.length > 0 ) {
+    let google = this.google.length > 0 ? 'https://www.google.com/search?q=' + this.google + '&pws=0&gl=us&gws_rd=cr' : '';
+    let baidu = this.baidu.length > 0 ? 'https://www.baidu.com/s?wd=' + this.baidu : '';
+    if (google.length > 0) {
       return google;
     }
     return baidu;
