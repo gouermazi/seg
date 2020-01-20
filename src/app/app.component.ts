@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'my-app';
   searchForm = new FormGroup({
     baidu: new FormControl(''),
-    google: new FormControl(''),
+    google: new FormControl('')
   });
   onSubmit() {
     console.warn(this.searchForm.value);
