@@ -13,6 +13,13 @@ export class AppComponent {
     google: new FormControl('')
   });
   onSubmit() {
-    console.warn(this.searchForm.value);
+    console.warn(this.searchForm.value.google);
+    console.warn(this.searchForm.value.baidu);
+
   }
+
+  jump(url:string) {
+    window.location.href = url;
+  }
+
 }
