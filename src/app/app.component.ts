@@ -8,13 +8,19 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
+  baidu: '';
+  google: '';
+
   searchForm = new FormGroup({
     baidu: new FormControl(''),
     google: new FormControl('')
   });
   onSubmit() {
-    console.warn(this.searchForm.value.google);
-    console.warn(this.searchForm.value.baidu);
+    this.baidu = this.searchForm.value.baidu;
+    this.google = this.searchForm.value.google;
+
+    console.warn(this.google);
+    console.warn(this.baidu);
 
   }
 
