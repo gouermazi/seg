@@ -1,135 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oops</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="stylesheet" href="./mdl/material.min.css">
-    <script src="./mdl/material.min.js"></script>
-    <link rel="stylesheet" href="./mdl/icon.css">
-    <link rel="stylesheet" href="./mdl/material.teal-green.min.css"/>
-    <script src="./jquery.min.js"></script>
-    <style>
-        @media only screen and (max-width: 1081px) {
-            .len {
-                width: 75%;
-            }
-        }
-
-        @media only screen and (min-width: 1082px) {
-            .len {
-                width: 45%;
-            }
-        }
-
-        html, body {
-            position: relative;
-            height: 100%;
-        }
-
-        .box {
-            background-color: #fff;
-            border-radius: 20px;
-            height: 350px;
-            margin: auto;
-            position: relative;
-        }
-
-        .go {
-            background-color: #fff;
-            border-radius: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 28%;
-        }
-
-        .hold {
-            height: 10%;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>seg</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<!-- Textfield with Floating Label -->
-<div class="hold">
-
-</div>
-<div class="box len">
-    <form autocomplete="off">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-            <input class="mdl-textfield__input len" type="text" id="sample1" data="bd" style="width:100%">
-            <label class="mdl-textfield__label" for="sample1">Baidu</label>
-        </div>
-    </form>
-    <br>
-    <form autocomplete="off">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:100%">
-            <input class="mdl-textfield__input  gg  len" type="text" id="sample4" data="gg" style="width:100%">
-            <label class="mdl-textfield__label" for="sample4">Google</label>
-        </div>
-    </form>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent go">
-            Go
-        </button>
-
-    <a class="jump"></a>
-</div>
-<script>
-    $(".mdl-textfield__input").keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-            event.preventDefault();
-            var text = $(this).val();
-            var engine = $(this).attr("data");
-            if (text.length) {
-                $(".mdl-textfield__input").each(function () {
-                    $(this).val("");
-                });
-                if (engine === 'bd') {
-                    // window.location.href = "https://www.baidu.com/s?wd=" + text;
-                    jump("https://www.baidu.com/s?wd=" + text)
-                }
-                if (engine === 'gg') {
-                    // window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
-                    jump("https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr")
-                }
-            }
-        }
-    });
-
-    $(".go").on("click", function () {
-        $(".mdl-textfield__input").each(function () {
-            var text = $(this).val();
-            var engine = $(this).attr("data");
-            if (text.length > 0) {
-                $(".mdl-textfield__input").each(function () {
-                    $(this).val("");
-                });
-                if (engine === 'bd') {
-                    // window.location.href = "https://www.baidu.com/s?wd=" + text;
-                    jump("https://www.baidu.com/s?wd=" + text)
-                }
-                if (engine === 'gg') {
-                    // window.location.href = "https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr";
-                    jump("https://www.google.com/search?q=" + text + "&pws=0&gl=us&gws_rd=cr")
-                }
-            }
-        });
-
-    });
-
-    $(document).ready(function () {
-        $(".gg").focus();
-    });
-
-    function jump(url) {
-        $(".jump").attr("href", url);
-        $(".jump")[0].click();
-    }
-</script>
+  <app-root></app-root>
 </body>
 </html>
