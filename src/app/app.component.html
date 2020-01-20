@@ -1,8 +1,9 @@
-<form class="example-form">
+<form [formGroup]="searchForm" class="example-form" (ngSubmit)="onSubmit()">
   <mat-form-field class="example-full-width first">
-    <input matInput placeholder="Baidu">
+    <input matInput [formControl]="baidu" placeholder="Baidu">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Google">
+    <input matInput [formControl]="google" placeholder="Google">
   </mat-form-field>
+  <button type="submit" mat-button [disabled]="!searchForm.valid">Submit</button>
 </form>

@@ -5,10 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { MatSliderModule } from '@angular/material/slider';
-import { MatInputModule}  from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { MatFormFieldModule} from '@angular/material';
     BrowserAnimationsModule,
     MatSliderModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
