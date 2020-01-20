@@ -8,8 +8,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
-  baidu: '';
-  google: '';
+  private baidu = '';
+  private google = '';
 
   searchForm = new FormGroup({
     baidu: new FormControl(''),
@@ -21,15 +21,29 @@ export class AppComponent {
 
     console.warn(this.google);
     console.warn(this.baidu);
+    this.clear();
+    this.jump(this.getTarget());
 
   }
 
-  jump(url:string) {
+  jump(url: string) {
     window.location.href = url;
   }
 
-  gettarget() {
-  
+  getTarget() {
+    let google = this.google.length > 0 ? 'https://www.google.com/search?q=' + this.google + '&pws=0&gl=us&gws_rd=cr'  : '';
+    let baidu  = this.baidu.length > 0 ? 'https://www.baidu.com/s?wd=' + this.baidu : '';
+    if (google.length > 0 ) {
+      return google;
+    }
+    return baidu;
+  }
+
+  clear() {
+    this.searchForm.patchValue({
+      baidu: '',
+      google: ''
+    });
   }
 
 }
