@@ -28,4 +28,8 @@ export class AppComponent {
     window.location.href = url;
   }
 
+  gettarget() {
+  
+  }
+
 }
